@@ -13,7 +13,7 @@ N_ult = Variable("N_{ult}", 1.8, "-", "ultimate load factor")
 V_min = Variable("V_{min}", 18.7, "m/s", "stall speed")
 C_Lmax = Variable("C_{L,max}", 1.6, "-", "max CL without flaps")
 S_wetratio = Variable("(\\frac{S}{S_{wet}})", 2.05, "-", "wetted area ratio")
-W_W_coeff1 = Variable("W_{W_{coeff1}}", 8.71e-5, "1/m", "Wing Weight Coefficient 1")
+W_W_coeff1 = Variable("W_{W_{coeff1}}", 8.71e-5, "1/m", "Wing Weight Coefficient")
 CDA0 = Variable("(CDA0)", 0.0031, "m^2", "fuselage drag area")
 W_0 = Variable("W_0", 33.32, "N", "aircraft weight excluding wing")
 
@@ -70,5 +70,5 @@ m = Model(D, constraints)
 # Solve the model
 sol = m.solve(verbosity=0)
 
-# Display results and sensitivity of A
+
 print(sol.summary())
